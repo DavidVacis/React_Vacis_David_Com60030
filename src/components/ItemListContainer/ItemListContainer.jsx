@@ -1,8 +1,11 @@
-const ItemListContainer = ({label}) => {
+import { Box, Center } from "@chakra-ui/react";
+
+const ItemListContainer = ({greeting}) => {
     return (
-        <div>
-            <h1>{label}</h1>
-        </div>
-    );
+        <Box fontSize={40} textAlign={"center"} margin={10}>
+            {greeting}
+        </Box>
+    )
 };
-export default ItemListContainer;
+
+export default ItemListContainer

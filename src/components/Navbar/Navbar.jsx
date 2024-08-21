@@ -16,6 +16,7 @@ import {
     Center,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import CartWidget from "../CartWidget/CartWidget";
 
 
 const Navbar = () => {
@@ -24,10 +25,12 @@ const Navbar = () => {
         <>
             <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-                    <Box>Logo</Box>
+                    <Box>CarcinusMadera</Box>
 
                     <Flex alignItems={"center"}>
-                        <Stack direction={"row"} spacing={7}>
+                        <Stack direction={"row"} alignItems={"center"} spacing={5}>
+                        <CartWidget />
+
                             <Button onClick={toggleColorMode}>
                                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                             </Button>
